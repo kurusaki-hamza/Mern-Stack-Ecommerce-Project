@@ -77,7 +77,6 @@
 }
 
 .search-ipt {
-  font-family: cursive;
   background-color: white;
   padding: 4px 4px 4px 10px;
   font-weight: bold;
@@ -799,7 +798,6 @@ button.right {
 .footer-one-name span {
   display: block;
   font-size: 18px;
-  font-family: cursive;
 }
 
 .footer-one-name {
@@ -826,7 +824,6 @@ button.right {
 }
 
 .footer-one-ul ul li {
-  font-family: cursive;
   font-size: 24px;
   cursor: pointer;
   border-right: 3px solid white;
@@ -856,7 +853,6 @@ button.right {
   padding: 13px;
   display: flex;
   font-size: 22px;
-  font-family: cursive;
   align-items: center;
   justify-content: center;
 }
@@ -906,7 +902,6 @@ button.right {
 
 .back-to-top a {
   color: white;
-  font-family: cursive;
   display: block;
   padding: 20px;
 }
@@ -2543,7 +2538,7 @@ span.moveSpanRight {
 }
 
 /* My screen */
-@media (min-width:1024px) {
+@media (min-width:1020px) {
   .header {
     height: 72px;
     justify-content: space-around;
@@ -3190,3 +3185,194 @@ span.moveSpanRight {
     font-size: 18px;
   }
 }
+
+/* 1600 x 900 screen */
+@media (min-width: 1600px) {
+  .search {
+    left: 3%;
+    height: 56%;
+    width: 43%;
+  }
+
+  .header ul {
+    top: 6.5%;
+    width: 548px;
+    left: 30.5%;
+  }
+
+  .header ul li {
+    font-size: 20px;
+    padding: 9px;
+  }
+
+  .logo {
+    font-size: 32px;
+    width: 20%;
+  }
+
+  button.search {
+    font-size: 20px;
+  }
+
+  .logout button {
+    padding: 5px;
+  }
+
+  .auth button a {
+    font-size: 19px;
+  }
+
+  .login button {
+    height: 98%;
+  }
+
+  .nav {
+    padding: 15px 6px 15px 0px;
+  }
+
+  .sidebarlines {
+    width: 54px;
+    height: 38px;
+    margin: 0 29px 0 9px;
+  }
+
+  span.sidebarline {
+    height: 4px;
+  }
+
+  .navlinks ul li>a {
+    font-size: 23px;
+  }
+
+  li.nav-categories div span:first-of-type {
+    font-size: 23px;
+  }
+
+  li.nav-categories div i {
+    font-size: 22px;
+  }
+
+  .navlinks ul li {
+    margin-right: 21px;
+  }
+
+  .navlinks ul li>a {
+    font-size: 23px;
+  }
+
+  li.nav-categories ul {
+    width: 303px;
+  }
+
+  .navlinks ul li.nav-categories a {
+    font-size: 22px;
+    height: 44px;
+  }
+
+  .sign-in a {
+    font-size: 27px;
+  }
+
+  .fa-user {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    font-size: 22px;
+  }
+
+  span.moveSpanRight {
+    left: 30%;
+    font-size: 47px;
+  }
+
+  .sidebar .categories h4 span {
+    font-size: 26px;
+  }
+
+  .sidebar .categories ul li {
+    font-size: 23px;
+  }
+
+  .sidebar-items h4 {
+    font-size: 25px;
+  }
+
+  .category {
+    height: 239px;
+  }
+
+  .category:first-of-type .category-right .category-name {
+    font-size: 19px;
+    height: 15%;
+  }
+
+  .category-icon i {
+    font-size: 49px;
+  }
+
+
+  .category-icon span {
+    font-size: 26px;
+  }
+
+  .off {
+    font-size: 27px;
+    margin: 0 13px;
+  }
+
+  .category-spans span:last-of-type {
+    font-size: 24px;
+  }
+
+  .category:first-of-type button {
+    font-size: 22px;
+  }
+
+  .category:hover:before {
+    box-shadow: 0 0 0 528px #0081bc;
+  }
+
+  .category .category-right .category-name {
+    font-size: 21px;
+    height: 15%;
+  }
+
+  .category button {
+    top: 9px;
+    font-size: 21px;
+  }
+
+  .allProductsMain .product-name span,
+  .favorites .product-name span,
+  .ordered-route .product-name span {
+    font-size: 20px;
+  }
+
+  .allProductsMain .product-price span,
+  .favorites .product-price span,
+  .ordered-route .product-price span {
+    font-size: 24px;
+  }
+
+  .allProductsMain .product-price .ordered,
+  .favorites .product-price .ordered,
+  .ordered-route .product-price .ordered {
+    color: yellow;
+  }
+
+  .loadingProducts {
+    height: 523px;
+    align-items: center;
+  }
+
+  .login-route {
+    padding: 155px 77px;
+  }
+
+  .sign-up {
+    padding: 138px 77px;
+  }
+}
+
+/* 1920 x 1080 screen */
+@media (min-width: 1900px) {}

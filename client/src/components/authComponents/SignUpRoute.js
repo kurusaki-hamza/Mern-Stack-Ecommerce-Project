@@ -27,7 +27,7 @@ const SignUpRoute = () => {
         for (const pair of new FormData(form.current)) {
             formData.append(pair[0], pair[1]);
         }
-        axios.post('/signup', formData).then((res) => {
+        axios.post('http://localhost:5001/signup', formData).then((res) => {
             if (res.data.signedUp) {
                 route("/Signin")
             } else if (!res.data.signedUp) {
@@ -73,7 +73,7 @@ const SignUpRoute = () => {
         async function isUserFn() {
             let isUser = false;
             setLoading(true);
-            await axios.get('/isUser', { withCredentials: true }).then((res) => {
+            await axios.get('http://localhost:5001/isUser', { withCredentials: true }).then((res) => {
                 isUser = res.data.isUser;
                 setLoading(false);
                 setAuthenticated(res.data.isUser);

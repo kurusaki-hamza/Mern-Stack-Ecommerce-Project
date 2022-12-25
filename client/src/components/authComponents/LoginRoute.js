@@ -26,7 +26,7 @@ const LoginRoute = () => {
         for (const pair of new FormData(form.current)) {
             formData.append(pair[0], pair[1]);
         }
-        axios.post('/login', formData, { withCredentials: true }).then((res) => {
+        axios.post('http://localhost:5001/login', formData, { withCredentials: true }).then((res) => {
             if (res.data.isUser) {
                 setUserEmail(email.current.value);
                 setArrOfProductsStatus(res.data.arr)
@@ -70,7 +70,7 @@ const LoginRoute = () => {
         async function isUserFn() {
             let isUser = false;
             setLoading(true);
-            await axios.get('/isUser', { withCredentials: true }).then((res) => {
+            await axios.get('http://localhost:5001/isUser', { withCredentials: true }).then((res) => {
                 isUser = res.data.isUser;
                 setLoading(false);
                 setAuthenticated(res.data.isUser);

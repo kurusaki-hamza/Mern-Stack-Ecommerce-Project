@@ -74,7 +74,7 @@ const Navbar = () => {
             if (nav.current && header.current) {
                 if (header.current.offsetHeight < window.scrollY) {
                     nav.current.style.top = "0px";
-                    nav.current.style.position = "fixed";
+                    nav.current.style.position = "sticky";
                 }
                 if (header.current.offsetHeight > window.scrollY) {
                     nav.current.style.position = "relative";
