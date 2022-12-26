@@ -80,7 +80,7 @@ const Header = () => {
             kitchentools: []
         });
         filter("allProductsLi", "allProducts");
-        axios.post("http://localhost:5001/logout", null, { withCredentials: true }).then((res) => {
+        axios.post("/logout", null, { withCredentials: true }).then((res) => {
         }).catch((err) => { console.log(err); })
     }
     return (

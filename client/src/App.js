@@ -128,7 +128,7 @@ const App = () => {
           id, favorite: true, ordered: false
         })
       }
-      axios.post('http://localhost:5001/favorite', { category, id, userEmail }, { withCredentials: true }).then((res) => {
+      axios.post('/favorite', { category, id, userEmail }, { withCredentials: true }).then((res) => {
       }).catch((err) => { console.log(err); })
       setArrOfProductsStatus(arrOfProductsStatusClone);
       if (pathname.includes('Favorites'.toLowerCase()) || pathname.includes('Favorites')) {
@@ -155,7 +155,7 @@ const App = () => {
         })
       }
       console.log("ordered click", { category, id, userEmail });
-      axios.post('http://localhost:5001/order', { category, id, userEmail }, { withCredentials: true }).then((res) => {
+      axios.post('/order', { category, id, userEmail }, { withCredentials: true }).then((res) => {
       }).catch((err) => { console.log(err); });
       setArrOfProductsStatus(arrOfProductsStatusClone);
       if (pathname.includes('Ordered'.toLowerCase()) || pathname.includes('Ordered')) {
@@ -663,12 +663,12 @@ const App = () => {
 
   // fetch all products from db
   useEffect(() => {
-    axios.get('http://localhost:5001/isUser', { withCredentials: true }).then((res) => {
+    axios.get('/isUser', { withCredentials: true }).then((res) => {
       setUser(res.data.isUser);
       setArrOfProductsStatus(res.data.arr);
       setUserEmail(res.data.email);
     }).catch(err => console.log("isUser req err", err.message));
-    axios.get('http://localhost:5001/store', { withCredentials: true }).then(({ data }) => {
+    axios.get('/store', { withCredentials: true }).then(({ data }) => {
       setProducts(data.doc);
       setLoadingProducts(false);
     }).catch(err => console.log(err.message));

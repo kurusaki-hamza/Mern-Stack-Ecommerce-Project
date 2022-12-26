@@ -11,7 +11,7 @@ const ContactRoute = () => {
     for (const pair of new FormData(form.current)) {
       formData.append(pair[0], pair[1]);
     }
-    axios.post('http://localhost:5001/contact', formData, { withCredentials: true }).then((res) => {
+    axios.post('/contact', formData, { withCredentials: true }).then((res) => {
       setContactRes(res.data);
     }).catch(err => {
       console.log("contact err", err)
